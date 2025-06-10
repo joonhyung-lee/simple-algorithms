@@ -1,7 +1,7 @@
 # simple-algorithms
 Codes I solved in Programmers
 
-### Essential Algorithms
+### Must-Know Algorithms
 
 - DFS / BFS Based Searching
   - Basic graph traversal techniques used in connected component search, shortest path in unweighted graphs, and backtracking.
