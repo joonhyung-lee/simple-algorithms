@@ -1,13 +1,21 @@
+from collections import deque
+
 def solution(numbers, target):
-    def dfs(index, sum):
+    queue = deque()
+    queue.append((0, 0))
+    count = 0
+    
+    while queue:
+        index, sum = queue.popleft()
         if index == len(numbers):
             if sum == target:
-                return 1
-            else:
-                return 0
+                count += 1
+            continue
         
-        return dfs(index+1, sum+numbers[index]) + dfs(index+1, sum-numbers[index])
-    return dfs(0, 0)
+        queue.append((index+1, sum+numbers[index]))
+        queue.append((index+1, sum-numbers[index]))
+        
+    return count
 
 numbers = [1, 1, 1, 1, 1]
 target = 3
