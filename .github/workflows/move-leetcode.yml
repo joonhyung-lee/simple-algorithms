@@ -1,10 +1,9 @@
 name: Move LeetCode Solutions
 
 on:
-  workflow_dispatch:
-  push:
+  pull_request:
     paths:
-      - '[0-9][0-9][0-9][0-9]-*/**'  # LeetHub가 생성하는 폴더 패턴 (예: 0020-valid-parentheses)
+      - '[0-9][0-9][0-9][0-9]-*/**'
 
 permissions:
   contents: write
